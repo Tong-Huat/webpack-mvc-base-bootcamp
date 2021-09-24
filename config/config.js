@@ -1,8 +1,8 @@
 module.exports = {
   development: {
-    username: '<YOUR_USERNAME>',
+    username: 'midzham',
     password: null,
-    database: 'webp_items_development',
+    database: 'express_development',
     host: '127.0.0.1',
     dialect: 'postgres',
   },

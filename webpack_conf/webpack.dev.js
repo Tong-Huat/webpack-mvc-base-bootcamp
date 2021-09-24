@@ -1,8 +1,9 @@
 const { merge } = require('webpack-merge');
+const common = require('./webpack.common.js');
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const common = require('./webpack.common.js');
+const webpack = require('webpack');
 
 module.exports = merge(common, {
   entry: {
@@ -31,6 +32,5 @@ module.exports = merge(common, {
       filename: './main.html',
       template: path.resolve(__dirname, '..', 'src', 'main.html'),
     }),
-
   ].filter(Boolean),
 });

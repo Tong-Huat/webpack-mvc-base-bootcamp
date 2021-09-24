@@ -3,11 +3,11 @@ import db from './models/index.mjs';
 import initItemsController from './controllers/items.mjs';
 
 export default function bindRoutes(app) {
-  const ItemsController = initItemsController(db);
+  const itemsController = initItemsController(db);
 
-  app.get('/items', ItemsController.index);
+  app.get('/items', itemsController.index);
 
-  // special JS page. Include the webpack index.html file
+  // special JS page. Include the webpack main.html file
   app.get('/home', (request, response) => {
     response.sendFile(resolve('dist', 'main.html'));
   });
